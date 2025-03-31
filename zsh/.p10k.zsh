@@ -1,0 +1,2 @@
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs time)
+typeset -g POWERLEVEL9K_NODE_VERSION_PROJECT_ONLY=true
