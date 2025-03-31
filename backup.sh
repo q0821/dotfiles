@@ -8,4 +8,4 @@ NOW=$(date "+%Y-%m-%d %H:%M:%S")
 # Git 操作
 git add .
 git commit -m "dotfiles auto backup: $NOW" >/dev/null 2>&1 || echo "⚠️ No changes to commit"
-git push origin master
+git push origin main
