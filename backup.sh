@@ -2,6 +2,9 @@
 
 cd ~/dotfiles || exit 1
 
+# 執行前清理一次
+~/dotfiles/utils/cleanup.sh
+
 # 記錄當前時間
 NOW=$(date "+%Y-%m-%d %H:%M:%S")
 
