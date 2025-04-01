@@ -48,6 +48,7 @@ export PATH="/usr/local/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PA
 
 # fzf keybindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # alias
 [ -f ~/.config/zsh/aliases.zsh ] && source ~/.config/zsh/aliases.zsh
