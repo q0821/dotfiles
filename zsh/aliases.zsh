@@ -1,3 +1,6 @@
+# 查詢外部ip
+alias myip='curl -s ifconfig.me | tee >(pbcopy); echo'
+
 # Git 快捷指令
 alias gst='git status'
 alias gl='git pull'

@@ -5,9 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# 延遲補完初始化，避免 Zim 產生 warning
-autoload -Uz compinit
-zstyle ':completion:*' menu select
+
+
 ### ----------------------------
 ### Zim 初始化（正確順序）
 ### ----------------------------
@@ -23,6 +22,10 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
 fi
 
 source ${ZIM_HOME}/init.zsh
+
+# 延遲補完初始化，避免 Zim 產生 warning
+autoload -Uz compinit
+zstyle ':completion:*' menu select
 
 ### ----------------------------
 ### 路徑與工具設定（在 zoxide 前）
