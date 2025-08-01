@@ -44,7 +44,7 @@ export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
+export SUPABASE_DB_PASSWORD='nn!UZt17$kx3P@==68jjHq2ls!W'
 ### ----------------------------
 ### 其他外掛與功能（補完後載入）
 ### ----------------------------
