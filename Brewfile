@@ -107,10 +107,7 @@ brew "supabase/tap/supabase"
 cask "android-platform-tools"
 cask "android-studio"         # Android development
 cask "git-credential-manager"
-cask "phpmon"                 # PHP version manager
 cask "warp"                   # Modern terminal
-cask "raycast"                # Spotlight replacement with productivity features
-cask "proxyman"               # HTTP debugging proxy
 
 ## Browsers
 cask "google-chrome"
@@ -118,7 +115,6 @@ cask "microsoft-edge"
 
 ## Productivity & Utilities
 cask "keka"                   # Archive utility
-cask "cleanmaster- system"   # System cleaning tool
 
 # ==========================================
 # VS Code Extensions
@@ -131,7 +127,7 @@ vscode "ms-ceintl.vscode-language-pack-zh-hant"    # 繁體中文語言包
 ## AI & Copilot
 vscode "github.copilot"                            # AI coding assistant
 vscode "github.copilot-chat"                       # AI chat assistant
-vscode "github.copilot-labs"                       # Copilot experimental features
+# vscode "github.copilot-labs"                     # Copilot Labs (discontinued)
 
 ## Web Development
 vscode "bradlc.vscode-tailwindcss"                 # Tailwind CSS IntelliSense
@@ -140,7 +136,7 @@ vscode "astro-build.astro-vscode"                  # Astro framework support
 vscode "formulahendry.auto-close-tag"              # Auto close HTML tags
 vscode "formulahendry.auto-rename-tag"             # Auto rename paired tags
 vscode "christian-kohler.path-intellisense"        # File path autocomplete
-vscode "bradlc.vscode-styled-components"           # Styled components syntax
+vscode "styled-components.vscode-styled-components" # Styled components syntax
 
 ## Git & Version Control
 vscode "mhutchie.git-graph"                        # Git graph visualization
@@ -164,7 +160,7 @@ vscode "yzhang.markdown-all-in-one"                # Markdown all-in-one
 vscode "jsynowiec.vscode-insertdatestring"         # Insert current date/time
 vscode "asuka.insertnumbers"                       # Insert sequential numbers
 vscode "jerryhong.autofilename"                    # Auto filename completion
-vscode "ms-vscode.vscode-json"                     # JSON language features
+# vscode "ms-vscode.vscode-json"                   # JSON support (built-in to VS Code)
 
 ## Docker & Remote Development
 vscode "ms-azuretools.vscode-docker"               # Docker container support
