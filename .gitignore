@@ -1,5 +1,28 @@
+# macOS system files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Zsh temporary files
+.zsh_history
+.zsh_sessions/
+*.zwc
+.history
+
+# Editor files
 *.swp
 *.swo
+*~
+
+# GitHub CLI sensitive files
+config/.config/gh/hosts.yml
+
+# Logs
 *.log
-.history
+backup.log
+
+# Temporary files
+*.tmp
+*.temp

@@ -16,10 +16,13 @@ fi
 echo "📦 安裝 stow 與 zimfw..."
 brew install stow
 
-# 3️⃣ 建立 symlink（使用 stow 管理 .zshrc 等檔案）
+# 3️⃣ 建立 symlink（使用 stow 管理設定檔）
 echo "🔗 建立 Zsh 設定檔 symlink..."
 cd ~/dotfiles
 stow zsh
+
+echo "🔗 建立 Git 設定檔 symlink..."
+stow config
 
 # 4️⃣ 安裝 Brewfile 中的所有套件
 echo "📦 執行 brew bundle 安裝所有工具..."
