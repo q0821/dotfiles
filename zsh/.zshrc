@@ -44,6 +44,12 @@ export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
+# 關閉 Homebrew 自動更新
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# 隱藏 Homebrew 的環境提示
+export HOMEBREW_NO_ENV_HINTS=1
 ### ----------------------------
 ### 其他外掛與功能（補完後載入）
 ### ----------------------------
