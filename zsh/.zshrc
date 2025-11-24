@@ -74,3 +74,6 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 export PATH="$PATH:/Users/hd/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# Added by Antigravity
+export PATH="/Users/hd/.antigravity/antigravity/bin:$PATH"
