@@ -43,7 +43,6 @@ export GEM_HOME="$HOME/.gem"
 export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # 關閉 Homebrew 自動更新
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -77,3 +76,4 @@ export PATH="$PATH:/Users/hd/.lmstudio/bin"
 
 # Added by Antigravity
 export PATH="/Users/hd/.antigravity/antigravity/bin:$PATH"
+alias bash='/opt/homebrew/bin/bash'
