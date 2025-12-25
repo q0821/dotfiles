@@ -77,3 +77,5 @@ export PATH="$PATH:/Users/hd/.lmstudio/bin"
 # Added by Antigravity
 export PATH="/Users/hd/.antigravity/antigravity/bin:$PATH"
 alias bash='/opt/homebrew/bin/bash'
+alias python=python3
+alias pip=pip3
