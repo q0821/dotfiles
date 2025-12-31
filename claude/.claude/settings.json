@@ -1,0 +1,116 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit",
+      "Read",
+      "View",
+      "Bash(npm run:*)",
+      "Bash(yarn:*)",
+      "Bash(node:*)",
+      "Bash(npx:*)",
+      "Bash(php:*)",
+      "Bash(composer:*)",
+      "Bash(git:*)",
+      "Edit(src/**)",
+      "Edit(public/**)",
+      "Edit(assets/**)",
+      "Edit(components/**)",
+      "Edit(pages/**)",
+      "Edit(*.js)",
+      "Edit(*.ts)",
+      "Edit(*.php)",
+      "Edit(*.css)",
+      "Edit(*.scss)",
+      "Edit(package.json)",
+      "Edit(composer.json)",
+      "Read(node_modules/**)",
+      "Read(vendor/**)"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(sudo:*)",
+      "Bash(chmod 777:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Edit(.env*)",
+      "Edit(*.key)",
+      "Edit(*.pem)"
+    ]
+  },
+  "env": {
+    "LANG": "zh_TW.UTF-8",
+    "LC_ALL": "zh_TW.UTF-8",
+    "CLAUDE_CODE_DISABLE_TELEMETRY": "true",
+    "BASH_DEFAULT_TIMEOUT_MS": "60000",
+    "NODE_ENV": "development"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit\\(.*\\.(js|ts|jsx|tsx|vue)\\)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"$file\"",
+            "description": "格式化程式碼"
+          },
+          {
+            "type": "command",
+            "command": "npx eslint \"$file\" --fix",
+            "description": "自動修復 ESLint 問題"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit\\(.*\\.(css|scss)\\)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx stylelint \"$file\" --fix",
+            "description": "自動修復 Stylelint 問題"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit\\(.*\\.php\\)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "php -l \"$file\"",
+            "description": "PHP 語法檢查"
+          }
+        ]
+      }
+    ]
+  },
+  "mcpServers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "ALLOWED_DIRECTORIES": "./src,./public,./assets,./components"
+      }
+    }
+  },
+  "projectConfig": {
+    "ignorePatterns": [
+      "node_modules/**",
+      "vendor/**",
+      "dist/**",
+      "build/**",
+      ".git/**",
+      ".vscode/**",
+      "*.log",
+      ".env*"
+    ],
+    "includePaths": [
+      "src/**",
+      "public/**",
+      "assets/**",
+      "components/**",
+      "package.json",
+      "composer.json"
+    ]
+  }
+}

@@ -32,5 +32,20 @@ brew bundle --file=~/dotfiles/Brewfile
 echo "🔄 初始化 Zim 模組..."
 source ~/.zshrc || true
 
+# 6️⃣ 還原 Claude Code 配置
+echo "🤖 還原 Claude Code 配置..."
+if [ -d ~/dotfiles/claude/.claude ]; then
+  mkdir -p ~/.claude/{agents,skills,project-types,specialized,tech-stacks}
+  cp ~/dotfiles/claude/.claude/CLAUDE.md ~/.claude/ 2>/dev/null || true
+  cp ~/dotfiles/claude/.claude/README.md ~/.claude/ 2>/dev/null || true
+  cp ~/dotfiles/claude/.claude/settings.json ~/.claude/ 2>/dev/null || true
+  rsync -a ~/dotfiles/claude/.claude/agents/ ~/.claude/agents/ 2>/dev/null || true
+  rsync -a ~/dotfiles/claude/.claude/skills/ ~/.claude/skills/ 2>/dev/null || true
+  rsync -a ~/dotfiles/claude/.claude/project-types/ ~/.claude/project-types/ 2>/dev/null || true
+  rsync -a ~/dotfiles/claude/.claude/specialized/ ~/.claude/specialized/ 2>/dev/null || true
+  rsync -a ~/dotfiles/claude/.claude/tech-stacks/ ~/.claude/tech-stacks/ 2>/dev/null || true
+  echo "✅ Claude Code 配置已還原"
+fi
+
 echo ""
 echo "✅ 完成！請重新啟動 Terminal 或執行：exec zsh"
